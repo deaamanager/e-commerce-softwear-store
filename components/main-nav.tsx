@@ -29,7 +29,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
             route.active ? "text-[#111]" : "text-neutral-500"
           )}
         >
-          {route.label}
+          {route?.label}
         </Link>
       ))}
     </nav>

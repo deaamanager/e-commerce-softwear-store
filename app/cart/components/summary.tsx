@@ -28,7 +28,7 @@ const Summary = () => {
     return total + Number(item.price);
   }, 0);
 
-  const onChickout = async () => {
+  const onCheckout = async () => {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
       { productIds: items.map((item) => item.id) }
@@ -54,7 +54,7 @@ const Summary = () => {
       </div>
       <Button
         disabled={items.length === 0}
-        onClick={onChickout}
+        onClick={onCheckout}
         className="w-full mt-6"
       >
         Checkout
