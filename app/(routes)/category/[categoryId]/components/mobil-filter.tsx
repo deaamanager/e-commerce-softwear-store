@@ -36,7 +36,7 @@ const MobilFilters: React.FC<MobilFiltersProps> = ({ sizes, colors }) => {
         onClose={onClose}
       >
         {/* Background */}
-        <div className="fixed inset-0 bg-black bg-opacity-25" />
+        <div className="fixed inset-0  bg-black bg-opacity-25 " />
         {/* Dialog Position */}
         <div className="fixed inset-0 z-40 flex">
           <Dialog.Panel

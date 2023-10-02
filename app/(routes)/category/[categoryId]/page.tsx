@@ -10,6 +10,8 @@ import ProductCard from "@/components/ui/product-card";
 import Filter from "./components/filter";
 import MobilFilters from "./components/mobil-filter";
 
+export const revalidate = 0;
+
 interface CategoryPageProps {
   params: {
     categoryId: string;

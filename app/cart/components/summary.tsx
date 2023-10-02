@@ -8,6 +8,7 @@ import { toast } from "react-hot-toast";
 import Button from "@/components/ui/Button";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
+import PayPalBtn from "@/components/PayPalBtn";
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -40,7 +41,7 @@ const Summary = () => {
   return (
     <div
       className="mt-16 rounded-lg bg-gray-50 
-     px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
+     px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8 flex flex-col "
     >
       <h2 className="text-lg font-medium text-gray-900">Order Summary</h2>
       <div className="mt-6 space-y-4">
@@ -55,10 +56,13 @@ const Summary = () => {
       <Button
         disabled={items.length === 0}
         onClick={onCheckout}
-        className="w-full mt-6"
+        className="  w-full mx-auto mt-6"
       >
         Checkout
       </Button>
+      <div className=" pt-5 w-full ">
+        <PayPalBtn />
+      </div>
     </div>
   );
 };
