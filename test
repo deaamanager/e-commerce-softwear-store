@@ -1,0 +1,133 @@
+// timing function testing :
+{
+  /*
+  
+  import { useEffect, useState } from "react";
+  
+  const CountdownTimer = () => {
+    const [days, setDays] = useState(0);
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+    const [secondes, setSecondes] = useState(0);
+  
+    useEffect(() => {
+      const updateCountdown = () => {
+        const target = new Date("10/04/2023 23:59:59");
+        const now = new Date();
+        if (now < target) {
+          const difference = target.getTime() - now.getTime();
+  
+          const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+          setDays(d);
+  
+          const h = Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          setHours(h);
+  
+          const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          setMinutes(m);
+  
+          const s = Math.floor((difference % (1000 * 60)) / 1000);
+          setSecondes(s);
+        } else {
+          setDays(0);
+          setHours(23);
+          setMinutes(59);
+          setSecondes(59);
+        }
+      };
+      const interval = setInterval(updateCountdown, 1000);
+  
+      updateCountdown();
+  
+      return () => clearInterval(interval);
+    }, []);
+    return (
+      <div className="flex flex-col items-end space-y-3 font-mono">
+        <h1 className="flex items-center ">
+          <span className="bg-red-600 text-white rounded-full py-2 px-1 h-10 w-10  text-center ">
+            {days}
+          </span>
+          <span className="bg-red-600 text-white rounded-full py-2 px-1 h-10 w-10  text-center ">
+            {hours}
+          </span>
+          <span className="bg-red-600 text-white rounded-full py-2 px-1 h-10 w-10  text-center ">
+            {minutes}
+          </span>
+          <span className="bg-red-600 text-white rounded-full py-2 px-1 h-10 w-10  text-center ">
+            {secondes}
+          </span>
+        </h1>
+      </div>
+    );
+  };
+  
+  export default CountdownTimer;
+  import { useEffect, useState } from "react";
+  
+  const CountdownTimer = () => {
+    const [days, setDays] = useState(0);
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+    const [secondes, setSecondes] = useState(0);
+  
+    useEffect(() => {
+      const updateCountdown = () => {
+        const target = new Date("10/04/2023 23:59:59");
+        const now = new Date();
+        if (now < target) {
+          const difference = target.getTime() - now.getTime();
+  
+          const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+          setDays(d);
+  
+          const h = Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          setHours(h);
+  
+          const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          setMinutes(m);
+  
+          const s = Math.floor((difference % (1000 * 60)) / 1000);
+          setSecondes(s);
+        } else {
+          setDays(0);
+          setHours(23);
+          setMinutes(59);
+          setSecondes(59);
+        }
+      };
+      const interval = setInterval(updateCountdown, 1000);
+  
+      updateCountdown();
+  
+      return () => clearInterval(interval);
+    }, []);
+    return (
+      <div className="flex flex-col items-end space-y-3 font-mono">
+        <h1 className="flex items-center ">
+          <span className="bg-red-600 text-white rounded-full py-2 px-1 h-10 w-10  text-center ">
+            {days}
+          </span>
+          <span className="bg-red-600 text-white rounded-full py-2 px-1 h-10 w-10  text-center ">
+            {hours}
+          </span>
+          <span className="bg-red-600 text-white rounded-full py-2 px-1 h-10 w-10  text-center ">
+            {minutes}
+          </span>
+          <span className="bg-red-600 text-white rounded-full py-2 px-1 h-10 w-10  text-center ">
+            {secondes}
+          </span>
+        </h1>
+      </div>
+    );
+  };
+  
+  export default CountdownTimer;
+  
+  
+  */
+}
+///18.10  9 uhr auslanderbe-termmin

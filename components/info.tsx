@@ -5,6 +5,7 @@ import { MouseEventHandler } from "react";
 import { Product } from "@/types";
 import Currency from "@/components/ui/currency";
 import Button from "@/components/ui/Button";
+import CountdownTimer from "@/components/ui/CountdownTimer";
 import useCart from "@/hooks/use-cart";
 
 interface InfoProps {
@@ -39,6 +40,12 @@ const Info: React.FC<InfoProps> = ({ data }) => {
             className="h-6 w-6 rounded-full border border-gray-600 "
             style={{ backgroundColor: data?.color?.value }}
           />
+        </div>
+        <div className="flex flex-col items-start gap-y-3 ">
+          <h3 className="font-semibold text-red-600 "> Endes in :</h3>
+          <div className=" flex items-center justify-center w-full  md:items-start md:justify-start relative">
+            <CountdownTimer />
+          </div>
         </div>
       </div>
       <div className="mt-10 flex items-center gap-x-3">
