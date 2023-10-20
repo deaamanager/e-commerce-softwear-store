@@ -22,7 +22,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     cart.addItem(data);
   };
   return (
-    <div>
+    <div className="">
       <h1 className="text-3xl font-bold text-gray-900 ">{data?.name}</h1>
       <div className="">
         <div className="my-2 flex items-center justify-center">
@@ -31,7 +31,6 @@ const Info: React.FC<InfoProps> = ({ data }) => {
               width={40}
               height={40}
               src="https://cdn.sanity.io/images/7n5v8za3/production/85ba22cfb9a657e8f74c92bdaa6ea6e631e5a8df-260x280.png"
-              //src="https://cdn.sanity.io/images/7n5v8za3/production/23a56edebcc36a7a8dfb80ca57d6da065f9fdfed-488x528.png"
               alt="budegt"
               className=" bg-blend-screen."
             />
@@ -67,16 +66,21 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       </div>
       <hr className="mb-4" />
       <div className=" flex flex-col gap-y-6">
-        <div className="flex items-center gap-x-4">
-          <h3 className="font-semibold text-black">Size:</h3>
-          <div>{data?.size?.name}</div>
-        </div>
-        <div className="flex items-center gap-x-4">
-          <h3 className="font-semibold text-black">Color:</h3>
-          <div
-            className="h-6 w-6 rounded-full border border-gray-600 "
-            style={{ backgroundColor: data?.color?.value }}
-          />
+        <div className=" flex items-start space-x-4">
+          <div className="flex items-center gap-x-4">
+            <Button className="font-semibold text-black backdrop-blur cursor-none bg-gray-100 border  text-sm rounded-2xl">
+              <div>{data?.size?.name}</div>
+            </Button>
+          </div>
+          <div className="flex items-center ">
+            <Button className="font-semibold text-black backdrop-blur gap-x-2 cursor-none bg-gray-100 border  text-sm rounded-2xl flex items-center justify-center">
+              <h3 className="font-semibold text-black">Color</h3>
+              <div
+                className="h-4 w-4 rounded-full border border-gray-600 "
+                style={{ backgroundColor: data?.color?.value }}
+              />
+            </Button>
+          </div>
         </div>
         <div className="flex flex-col items-start gap-y-3 ">
           <h3 className="font-semibold text-red-600 "> Endes in :</h3>
@@ -88,7 +92,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       <div className="mt-10 flex items-center gap-x-3">
         <Button
           onClick={onAddToCart}
-          className="flex items-center gap-x-2 rounded-2xl"
+          className="flex items-center justify-center gap-x-2 rounded-2xl w-full md:w-[70%] "
         >
           Add To Cart
           <ShoppingCart />

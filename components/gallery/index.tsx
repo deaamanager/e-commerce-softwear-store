@@ -11,37 +11,43 @@ interface GalleryProps {
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
   return (
-    <Tab.Group as="div" className="flex flex-col-reverse">
-      <div
-        className="mx-auto mt-6 .hidden w-full max-w-2xl sm:block
+    <>
+      <div className="flex md:hidden">there is 3d solder phone</div>
+      <Tab.Group
+        as="div"
+        className=" md:flex-col-reverse  hidden  sticky top-0  md:flex"
+      >
+        <div
+          className="mx-auto mt-6  hidden w-full max-w-2xl sm:block
         lg:max-w-none
         "
-      >
-        <Tab.List className="grid grid-cols-4 gap-6">
-          {images?.map((imge) => (
-            <GallaeryTab key={imge.id} image={imge} />
-          ))}
-        </Tab.List>
-      </div>
-      <Tab.Panels className=" aspect-square w-full">
-        {images?.map((image) => (
-          <Tab.Panel key={image.id}>
-            <div
-              className=" aspect-square relative h-full w-full sm:rounded-lg
+        >
+          <Tab.List className="grid grid-cols-4 gap-6">
+            {images?.map((imge) => (
+              <GallaeryTab key={imge.id} image={imge} />
+            ))}
+          </Tab.List>
+        </div>
+        <Tab.Panels className=" aspect-square w-full">
+          {images?.map((image) => (
+            <Tab.Panel key={image.id}>
+              <div
+                className=" aspect-square relative h-full w-full sm:rounded-lg
             overflow-hidden 
             "
-            >
-              <Image
-                fill
-                src={image.url}
-                alt="Image"
-                className="object-cover object-center "
-              />
-            </div>
-          </Tab.Panel>
-        ))}
-      </Tab.Panels>
-    </Tab.Group>
+              >
+                <Image
+                  fill
+                  src={image.url}
+                  alt="Image"
+                  className="object-cover object-center "
+                />
+              </div>
+            </Tab.Panel>
+          ))}
+        </Tab.Panels>
+      </Tab.Group>
+    </>
   );
 };
 

@@ -22,8 +22,9 @@ const Currency: React.FC<CurrencyProps> = ({ value }) => {
   return (
     <div className="font-semibold space-x-3">
       <span>{formatter.format(Number(value))}</span>
-      <span className="text-red-500">
-        {formatter.format(Number(value) + 50)}{" "}
+      <span className="text-red-500 relative overflow-hidden ">
+        <span className="absolute w-[120%]  h-[2px] bg-red-500    -right-2 top-3 rounded-full  " />
+        <span>{formatter.format(Number(value) + 50)} </span>
       </span>
     </div>
   );

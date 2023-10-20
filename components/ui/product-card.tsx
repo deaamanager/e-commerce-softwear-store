@@ -7,7 +7,6 @@ import { MouseEventHandler } from "react";
 import { Product } from "@/types";
 import IconButton from "@/components/ui/icon-button";
 import Currency from "@/components/ui/currency";
-import CountdownTimer from "@/components/ui/CountdownTimer";
 import { useRouter } from "next/navigation";
 import usePreviewModal from "@/hooks/use-preview-modal";
 import useCart from "@/hooks/use-cart";
@@ -69,9 +68,12 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
         <p className="font-semibold text-lg">{data?.name}</p>
         <p className="text-sm text-gray-500">{data.category?.name} </p>
       </div>
-      <div>
+      {/*
+        //primery design //
+         <div>
         <CardCountDownTimer />
-      </div>
+      </div>     
+     */}
       {/*Price */}
       <div className="flex items-center justify-between">
         <Currency value={data?.price} />
